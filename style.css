@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {  
+  margin: 0 auto;
+  height: 100vh;
+  background: linear-gradient(to top, #FF9640, #009999);
+  padding-top: 0.2vh;
+}
+
+.game {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  color: white;
+  row-gap: 10px;
+  padding-bottom: 10px;
+  column-gap: 5px;
+}
+
+.statusbar {
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: row;  
+  flex-wrap: wrap; 
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.cell {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background: #FFB273;  
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  border: 1px solid black;
+  transition: all 0.3s;
+  object-fit: cover;
+  color: transparent;  
+}
+
+.cell:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+
+.cell:active {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.emptycell {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.emptycell:hover {
+  cursor: pointer;
+}
+
+.start,
+.restart,
+.close-button,
+button {
+  word-wrap: wrap;
+  border: none;
+  background: #FFB273;
+  height: 30px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  outline: none;
+  border-radius: 25%;
+  opacity: 1;
+  transition: opacity 0.4s;
+  min-width: 100px;
+  color: black;
+}
+
+span {
+  margin-top: 10px;
+}
+
+.close-button {
+  margin-top: 10px;
+}
+
+.start:hover,
+.restart:hover,
+.close-button:hover,
+button:hover {
+  opacity: 0.9;
+  transition: opacity 0.4s;
+  cursor: pointer;
+}
+
+.start:active,
+.restart:active,
+.close-button:active,
+button:active {
+  opacity: 0.9;
+  box-shadow: inset 4px 4px 4px rgba(0,0,0,0.5); 
+  transition: box-shadow 0.4s;
+  cursor: pointer;
+}
+
+select {
+  margin: 0 5px;
+}
+
+.score-list {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 0.2vh);
+  background: linear-gradient(to top, #FF9640, #009999);
+  font-size: 0.8rem;
+  color: white;
+  position: absolute;
+  z-index: 100;
+}
+
+.open {
+  display: flex;
+}
+
+
+@media (max-width: 480px) {
+  * {
+    font-size: 1rem;
+  }
+  
+  .game {
+    width: 100%;
+  }
+}
