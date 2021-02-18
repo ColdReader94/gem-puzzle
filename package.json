@@ -1,0 +1,24 @@
+{
+  "name": "gem-puzzle",
+  "version": "1.0.0",
+  "description": "rs-scopes study project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "makebundle": "webpack -w --devtool source-map ./script.js -o ./dist/"
+  },
+  "author": "Vadim Sidorov (ColdReader94)",
+  "license": "ISC"
+}
